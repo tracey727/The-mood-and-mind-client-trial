@@ -1,0 +1,109 @@
+/* V5 — dark forest-green background outside the pale portal boxes */
+html,
+body {
+  background: #102f27 !important;
+}
+
+body {
+  background:
+    radial-gradient(circle at 14% 7%, rgba(92,138,121,.22), transparent 28%),
+    radial-gradient(circle at 88% 30%, rgba(57,105,88,.18), transparent 26%),
+    linear-gradient(180deg, #173f33 0%, #12372d 48%, #0f3027 100%) !important;
+}
+
+body::before {
+  opacity: .15 !important;
+  background:
+    radial-gradient(ellipse at 45% 18%, rgba(157,194,180,.20), transparent 32%),
+    radial-gradient(ellipse at 62% 82%, rgba(99,150,131,.14), transparent 34%) !important;
+}
+
+.app-shell {
+  background:
+    radial-gradient(circle at 86% 8%, rgba(115,161,143,.14), transparent 26%),
+    linear-gradient(180deg, #173f33 0%, #12372d 50%, #102f27 100%) !important;
+  border-inline-color: rgba(255,255,255,.08) !important;
+  box-shadow: 0 22px 58px rgba(5,22,17,.30) !important;
+}
+
+.topbar {
+  background: rgba(18,55,45,.94) !important;
+  border-bottom-color: rgba(255,255,255,.10) !important;
+}
+
+.wordmark,
+.icon-button {
+  color: #f5faf7 !important;
+}
+.wordmark em { color: #b7d5c9 !important; }
+.icon-button:hover,
+.icon-button:focus-visible {
+  background: rgba(255,255,255,.08) !important;
+  border-color: rgba(255,255,255,.12) !important;
+}
+
+.trial-banner {
+  color: #e7f0ec !important;
+  background: rgba(25,70,57,.90) !important;
+  border-bottom-color: rgba(255,255,255,.09) !important;
+}
+.trial-dot {
+  background: #b7d5c9 !important;
+  box-shadow: 0 0 0 4px rgba(183,213,201,.12) !important;
+}
+
+.page-title,
+.page-lead,
+.section-title h2 {
+  color: #f3f8f5 !important;
+}
+.page-lead { color: #d3e1db !important; }
+.section-title button,
+.section-title a,
+.text-link { color: #c3dbd1 !important; }
+
+/* Keep the actual content boxes light */
+.hero,
+.card,
+.quick-card,
+.list-item,
+.care-panel,
+.care-fieldset,
+.summary-tile,
+.info-note,
+.privacy-strip {
+  border: 2px solid #0d2d24 !important;
+}
+
+/* Headings and copy inside light boxes remain dark and readable */
+.hero h1,
+.card h2,
+.card h3,
+.quick-card strong,
+.list-copy strong,
+.care-panel h2,
+.care-fieldset label,
+.summary-tile strong {
+  color: #294d41 !important;
+}
+.hero p,
+.card p,
+.quick-card small,
+.list-copy small,
+.care-panel p,
+.care-fieldset .field-help,
+.summary-tile span,
+.info-note {
+  color: #61766e !important;
+}
+
+.bottom-nav {
+  background: rgba(15,47,39,.96) !important;
+  border-top-color: rgba(255,255,255,.10) !important;
+  box-shadow: 0 -10px 28px rgba(5,22,17,.18) !important;
+}
+.bottom-nav button { color: #bdd1c8 !important; }
+.bottom-nav button.active {
+  color: #ffffff !important;
+  background: rgba(183,213,201,.14) !important;
+}
