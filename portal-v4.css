@@ -279,6 +279,26 @@ body::before {
 
 .toast { background:#35594d; color:#fff; }
 
+/* Strong dark-green outlines while preserving the pale interiors */
+.hero,
+.card,
+.quick-card,
+.list-item,
+.care-panel,
+.care-fieldset,
+.summary-tile,
+.info-note,
+.privacy-strip {
+  border-color: #214b3d;
+}
+
+.quick-card:hover,
+.quick-card:focus-visible,
+.list-item:hover,
+.list-item:focus-visible {
+  border-color: #173f33;
+}
+
 @media (max-width: 370px) {
   .portal-summary { grid-template-columns: 1fr; }
 }
