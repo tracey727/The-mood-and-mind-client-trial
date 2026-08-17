@@ -1,0 +1,1 @@
+export const GIGI_PRODUCTION_BUILD = '2026-08-18';
