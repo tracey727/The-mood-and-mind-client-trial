@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0d2b22" />
+  <meta name="description" content="Trial client app concept for The Mood & Mind Centre." />
+  <title>Mood & Mind Centre — Client App Trial</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+
+  <div class="app-shell">
+    <header class="topbar">
+      <button class="icon-button back-button" id="backButton" type="button" aria-label="Go back" hidden>
+        <span aria-hidden="true">‹</span>
+      </button>
+      <button class="wordmark" type="button" data-route="home" aria-label="Mood and Mind Centre home">
+        <span>The Mood &amp; </span><em>Mind</em><span> Centre</span>
+      </button>
+      <a class="icon-button" href="tel:+61755732200" aria-label="Call reception">
+        <span aria-hidden="true">☎</span>
+      </a>
+    </header>
+
+    <div class="trial-banner" role="note">
+      <span class="trial-dot" aria-hidden="true"></span>
+      <span><strong>Trial preview:</strong> no live client records are connected.</span>
+    </div>
+
+    <main id="main" tabindex="-1"></main>
+
+    <nav class="bottom-nav" aria-label="Primary navigation">
+      <button type="button" data-route="home" data-nav="home" aria-label="Home">
+        <span class="nav-icon" aria-hidden="true">⌂</span><span>Home</span>
+      </button>
+      <button type="button" data-route="appointments" data-nav="appointments" aria-label="Appointments">
+        <span class="nav-icon" aria-hidden="true">▣</span><span>Appointments</span>
+      </button>
+      <button type="button" data-route="resources" data-nav="resources" aria-label="Resources">
+        <span class="nav-icon" aria-hidden="true">▤</span><span>Resources</span>
+      </button>
+      <button type="button" data-route="contact" data-nav="contact" aria-label="Contact">
+        <span class="nav-icon" aria-hidden="true">◌</span><span>Contact</span>
+      </button>
+      <button type="button" data-route="profile" data-nav="profile" aria-label="My profile">
+        <span class="nav-icon" aria-hidden="true">♙</span><span>Me</span>
+      </button>
+    </nav>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+  <script src="./app.js" defer></script>
+</body>
+</html>

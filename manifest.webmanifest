@@ -1,0 +1,10 @@
+{
+  "name": "Mood & Mind Centre — Client App Trial",
+  "short_name": "Mood & Mind",
+  "description": "Client-facing trial concept for The Mood & Mind Centre.",
+  "start_url": "./#/home",
+  "display": "standalone",
+  "background_color": "#061711",
+  "theme_color": "#0d2b22",
+  "icons": []
+}
