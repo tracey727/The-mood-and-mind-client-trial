@@ -279,7 +279,7 @@ body::before {
 
 .toast { background:#35594d; color:#fff; }
 
-/* Strong dark-green outlines while preserving the pale interiors */
+/* Clearly visible dark-green framing around all pale portal boxes */
 .hero,
 .card,
 .quick-card,
@@ -289,14 +289,14 @@ body::before {
 .summary-tile,
 .info-note,
 .privacy-strip {
-  border-color: #214b3d;
+  border: 2px solid #173f33 !important;
 }
 
 .quick-card:hover,
 .quick-card:focus-visible,
 .list-item:hover,
 .list-item:focus-visible {
-  border-color: #173f33;
+  border-color: #0f3027 !important;
 }
 
 @media (max-width: 370px) {
