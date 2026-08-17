@@ -3,13 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="theme-color" content="#1b3d33" />
-  <meta name="description" content="Trial client app concept for The Mood & Mind Centre." />
-  <title>Mood & Mind Centre — Client App Trial</title>
+  <meta name="theme-color" content="#f4f8f5" />
+  <meta name="description" content="Trial personal client care portal concept for The Mood & Mind Centre." />
+  <title>Mood & Mind Centre — Client Portal Trial</title>
   <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
   <link rel="manifest" href="./manifest.webmanifest" />
   <link rel="stylesheet" href="./styles.css" />
   <link rel="stylesheet" href="./v3.css" />
+  <link rel="stylesheet" href="./portal-v4.css" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -21,7 +22,7 @@
       <button class="icon-button back-button" id="backButton" type="button" aria-label="Go back" hidden>
         <span aria-hidden="true">‹</span>
       </button>
-      <button class="wordmark" type="button" data-route="home" aria-label="Mood and Mind Centre home">
+      <button class="wordmark" type="button" data-route="home" aria-label="Mood and Mind Centre client portal home">
         <span>The Mood &amp; </span><em>Mind</em><span> Centre</span>
       </button>
       <a class="icon-button" href="tel:+61755732200" aria-label="Call reception">
@@ -31,7 +32,7 @@
 
     <div class="trial-banner" role="note">
       <span class="trial-dot" aria-hidden="true"></span>
-      <span><strong>Trial preview:</strong> no live client records are connected.</span>
+      <span><strong>Client portal trial:</strong> demo data stays on this device; no live clinical records are connected.</span>
     </div>
 
     <main id="main" tabindex="-1"></main>
@@ -40,23 +41,22 @@
       <button type="button" data-route="home" data-nav="home" aria-label="Home">
         <span class="nav-icon" aria-hidden="true">⌂</span><span>Home</span>
       </button>
-      <button type="button" data-route="appointments" data-nav="appointments" aria-label="Appointments">
-        <span class="nav-icon" aria-hidden="true">▣</span><span>Appointments</span>
+      <button type="button" data-route="care" data-nav="care" aria-label="My care">
+        <span class="nav-icon" aria-hidden="true">♡</span><span>My Care</span>
       </button>
-      <button type="button" data-route="resources" data-nav="resources" aria-label="Resources">
+      <button type="button" data-route="prepare" data-nav="prepare" aria-label="Prepare for my session">
+        <span class="nav-icon" aria-hidden="true">✓</span><span>Prepare</span>
+      </button>
+      <button type="button" data-route="resources" data-nav="resources" aria-label="My resources">
         <span class="nav-icon" aria-hidden="true">▤</span><span>Resources</span>
       </button>
-      <button type="button" data-route="contact" data-nav="contact" aria-label="Contact">
-        <span class="nav-icon" aria-hidden="true">◌</span><span>Contact</span>
-      </button>
-      <button type="button" data-route="profile" data-nav="profile" aria-label="My profile">
+      <button type="button" data-route="profile" data-nav="profile" aria-label="My preferences">
         <span class="nav-icon" aria-hidden="true">♙</span><span>Me</span>
       </button>
     </nav>
   </div>
 
   <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
-  <script src="./app.js" defer></script>
-  <script src="./v3.js" defer></script>
+  <script src="./portal-v4.js" defer></script>
 </body>
 </html>
