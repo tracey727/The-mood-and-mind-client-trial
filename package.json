@@ -1,20 +1,21 @@
 {
-  "name": "mood-mind-gigi-client",
+  "name": "mood-mind-client",
   "private": true,
-  "version": "2.0.0",
+  "version": "3.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "check": "npm run build"
   },
   "dependencies": {
-    "@neondatabase/neon-js": "latest",
-    "react": "^19.1.1",
-    "react-dom": "^19.1.1"
+    "@neondatabase/serverless": "1.0.2",
+    "react": "19.1.1",
+    "react-dom": "19.1.1"
   },
   "devDependencies": {
-    "@vitejs/plugin-react": "latest",
-    "vite": "latest"
+    "@vitejs/plugin-react": "7.0.1",
+    "vite": "7.1.3"
   }
 }
