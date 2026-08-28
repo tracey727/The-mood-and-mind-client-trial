@@ -17,11 +17,11 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-          cache: npm
-          cache-dependency-path: package-lock.json
-      - name: Install dependencies
-        run: npm install --package-lock-only && npm ci
-      - name: Build
+      - name: Resolve exact dependency tree
+        run: npm install --package-lock-only
+      - name: Install from resolved tree
+        run: npm ci
+      - name: Build production bundle
         run: npm run build
       - name: Verify Cloudflare configuration
         run: test -f wrangler.jsonc && test -d dist
