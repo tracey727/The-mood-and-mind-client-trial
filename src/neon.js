@@ -1,17 +1,22 @@
-import { createClient } from '@neondatabase/neon-js';
+import { createClient, BetterAuthVanillaAdapter } from '@neondatabase/neon-js';
 
 export const AUTH_URL = 'https://ep-gentle-water-ay5qyu2l.neonauth.c-5.us-east-2.aws.neon.tech/neondb/auth';
 export const DATA_API_URL = 'https://ep-gentle-water-ay5qyu2l.apirest.c-5.us-east-2.aws.neon.tech/neondb/rest/v1';
 
 export const neon = createClient({
-  auth: { url: AUTH_URL },
-  dataApi: { url: DATA_API_URL },
+  auth: {
+    adapter: BetterAuthVanillaAdapter(),
+    url: AUTH_URL,
+  },
+  dataApi: {
+    url: DATA_API_URL,
+  },
 });
 
 export async function getCurrentSession() {
   const result = await neon.auth.getSession();
   if (result?.error) throw result.error;
-  return result?.data?.session || result?.data || null;
+  return result?.data || null;
 }
 
 export async function signInWithEmail(email, password) {
