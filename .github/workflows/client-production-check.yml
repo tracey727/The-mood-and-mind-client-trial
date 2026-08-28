@@ -1,0 +1,27 @@
+name: Client production check
+
+on:
+  push:
+    branches: [production-client-v1]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Resolve exact dependency tree
+        run: npm install --package-lock-only
+      - name: Install from resolved tree
+        run: npm ci
+      - name: Build production bundle
+        run: npm run build
+      - name: Verify Cloudflare configuration
+        run: test -f wrangler.jsonc && test -d dist
