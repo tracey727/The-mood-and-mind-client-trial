@@ -24,29 +24,25 @@ This version has **no server, no database and no live patient/client-record inte
 
 Real booking/account actions are routed to Mood & Mind's current secure Zanda client portal. Do not add real clinical notes, assessments, therapy records or sensitive uploads to this trial.
 
-## Deploy to GitHub
+## Repository and deployment
 
-1. Unzip this folder.
-2. Create a **new repository** for this trial (recommended: private while Irene reviews it).
-3. Upload the contents of the folder so `index.html` is at the repository root.
-4. Commit/push.
+This repository has evolved into a **Vite + React** client-trial application. The current active platform direction is **GitHub + Cloudflare Pages**.
 
-No build step is required.
+Cloudflare Pages settings:
 
-## Deploy to Vercel from GitHub
+- Production branch: `main`
+- Build command: `npm run build`
+- Build output directory: `dist`
+- Install command: default npm install
+- No production health/client database is authorised by this trial build
 
-1. In Vercel choose **Add New → Project**.
-2. Import the GitHub repository.
-3. Vercel should use **Framework Preset: Other** (the included `vercel.json` sets `framework` to `null`).
-4. Leave the **Build Command blank**.
-5. Use the repository root as the output/static directory (`.`) if Vercel asks.
-6. Deploy.
+The root `_headers` file preserves the browser security headers previously carried by the legacy Vercel configuration.
 
-Because this is plain HTML/CSS/JavaScript, there are no npm dependencies and no framework build to fail.
+Do not create a new Vercel deployment from this repository.
 
-## Fastest Vercel trial option
+### Open production candidate
 
-Vercel also supports deploying static folders directly. You can drag the unzipped project folder into Vercel Drop and publish a shareable trial without creating a build pipeline first.
+PR #1 (`production-client-v1`) is separate production work for a Cloudflare/Neon client companion. It remains **HOLD / DO NOT MERGE** because its required production check is currently RED. The failure is in dependency resolution and is not being bypassed as repository housekeeping.
 
 ## Local preview
 
@@ -62,13 +58,14 @@ Then open `http://localhost:8080`.
 
 ## Smoke test
 
-If Node.js is installed:
+For a local production build:
 
 ```bash
-node tests/smoke.mjs
+npm install
+npm run build
 ```
 
-The smoke test checks that the required files exist and key links/content are present.
+The generated deployment output is `dist/`.
 
 ## Current public-practice details used in this trial
 
